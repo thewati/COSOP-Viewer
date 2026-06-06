@@ -59,12 +59,14 @@ Open another terminal and Enter the following commands. Make sure the backend te
   - To: `new Array(numPages),`
     
 - Due to API inference quota contraints, I used Groq llama-3.1-8b-instant temporarily to continue improving accuracy of the COSOP-Viewer.The COSOP-Viewer works with Hugging Face by default. If you want to use Groq, then
-  - Get a Groq API Key and update the .env file accordingly. This was expained in the "Installation" section
-  - Change the client in `main.py`
+  - First, get a Groq API Key and update the .env file accordingly. This was expained in the "Installation" section 
+    
+  - Then change the client in `main.py`
     - Comment out or delete the Hugging Face client:
       https://github.com/thewati/COSOP-Viewer/blob/0fe7d314528dcaf98e60f6e8f70b0cd5e2a0abe4/backend/main.py#L17-L20
     - Replace it with new Groq client:
       `client = Groq(api_key=os.getenv("GROQ_API_KEY"))`
+  
   - Finally, change the response in the function `query_llm()` which is in the file `main.py`
     - Comment out or delete the Hugging Face response:
       https://github.com/thewati/COSOP-Viewer/blob/0fe7d314528dcaf98e60f6e8f70b0cd5e2a0abe4/backend/main.py#L52-L61
@@ -82,5 +84,5 @@ Open another terminal and Enter the following commands. Make sure the backend te
         max_tokens=250
         )
       ```
-    
+      
 - Page references are based on chunk-level extraction.
