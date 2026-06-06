@@ -59,7 +59,7 @@ function App() {
       setPartners(response.data.partners || []);
     } catch (error) {
       console.error(error);
-      alert("Failed to process PDF");
+      alert("Only PDF files allowed! Try again with a valid PDF.");
     } finally {
       setLoading(false);
     }
@@ -97,7 +97,7 @@ function App() {
           padding: "10px",
         }}
       >
-        <h2>PDF Viewer</h2>
+        <h2>COSOP PDF Viewer</h2>
 
         <input
           type="file"

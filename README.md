@@ -24,8 +24,9 @@ IFAD COSOP Viewer extracts partners from COSOP PDFs and displays them. Upon clic
     - App.css
     - App.tsx
 - screenshots/
-  - ...
-  - ...
+  - automatic_navigation.png
+  - list_of_partners.png
+  - uploading_pdf.png
 
 
 # Installation
